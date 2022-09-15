@@ -22,12 +22,10 @@ export const TodoList = () => {
   const { todos, setTodos } = React.useContext(TodosContext);
   const [check, setCheck] = React.useState(todos.checked);
   const handleDelete = (id) => {
-    // Fix an ability to delete task
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   const toggleCheck = (id) => {
-    // Fix an ability to toggle task
     // eslint-disable-next-line block-spacing, quotes
      setTodos(todos.map((todo) => {
       if (todo.id === id) {
@@ -39,21 +37,7 @@ export const TodoList = () => {
 
       return todo;
     }));
-    // setCheck(!check);
-    // todos[id].checked = check;
-    // console.log(todos[id].checked, id);
-    // if (todos[id].checked === true){
-    //   todos[id].checked === false;
-    // }
-    // else {
-    //   todos[id].checked === true;
-    // }
-    // console.log(id, check);
-    // setCheck(!(todos[id].checked));
-    // setCheck(!todos[id].checked);
-    //   setTodos([...todos, todos[id].checked = check]);
   };
-  React.useEffect(() => {})
 
   const handleKeyUp = (e, id) => {
     if (e.keyCode === 13) {
