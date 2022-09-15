@@ -12,8 +12,6 @@ import "./todo-form.scss";
 export const TodoForm = () => {
   const { todos, setTodos } = React.useContext(TodosContext);
   const [task, setTask] = React.useState("");
-  console.log(setTodos, "2");
-  console.log(todos);
 
   const handleSubmit = (e) => {
     let i = todos.length;

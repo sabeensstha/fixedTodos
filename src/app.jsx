@@ -37,7 +37,7 @@ const todosTemplate = [
   {
     id: 5,
     label: 'Fix an ability to count completed tasks',
-    checked: true,
+    checked: false,
   },
 ];
 
